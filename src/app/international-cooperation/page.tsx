@@ -41,35 +41,38 @@ export default function InternationalCooperationPage() {
 
       <Section>
         <h2 className="sr-only">Partner organizations</h2>
+        {/* Only Netpas and Şanlı Netzbau shown. LR Group (id: lr-group) hidden until approval — then remove filter below */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {internationalCooperation.partners.map((partner) => (
-            <Card key={partner.id}>
-              <h3 className="text-xl font-bold text-slate-900">{partner.name}</h3>
-              <p className="mt-1 text-accent font-medium">{partner.country}</p>
-              <p className="mt-3 text-sm font-medium text-slate-700">Focus areas</p>
-              <ul className="mt-1 space-y-1 text-slate-600 text-sm list-disc list-inside">
-                {partner.focusAreas.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-              <p className="mt-4 text-sm font-medium text-slate-700">How we collaborate</p>
-              <ul className="mt-1 space-y-1 text-slate-600 text-sm list-disc list-inside">
-                {partner.howWeCollaborate.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-              <a
-                href={partner.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-lg border-2 border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-accent hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-                aria-label={`Visit ${partner.name} website (opens in new tab)`}
-              >
-                Website
-                <ExternalLink className="h-4 w-4" aria-hidden />
-              </a>
-            </Card>
-          ))}
+          {internationalCooperation.partners
+            .filter((p) => p.id !== "lr-group")
+            .map((partner) => (
+              <Card key={partner.id}>
+                <h3 className="text-xl font-bold text-slate-900">{partner.name}</h3>
+                <p className="mt-1 text-accent font-medium">{partner.country}</p>
+                <p className="mt-3 text-sm font-medium text-slate-700">Focus areas</p>
+                <ul className="mt-1 space-y-1 text-slate-600 text-sm list-disc list-inside">
+                  {partner.focusAreas.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-sm font-medium text-slate-700">How we collaborate</p>
+                <ul className="mt-1 space-y-1 text-slate-600 text-sm list-disc list-inside">
+                  {partner.howWeCollaborate.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                <a
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 rounded-lg border-2 border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-accent hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                  aria-label={`Visit ${partner.name} website (opens in new tab)`}
+                >
+                  Website
+                  <ExternalLink className="h-4 w-4" aria-hidden />
+                </a>
+              </Card>
+            ))}
         </div>
         <p className="mt-6 text-sm text-slate-600 border-l-4 border-accent pl-4">
           {internationalCooperation.usOperationsNote}

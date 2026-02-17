@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:8082": "next dev -p 8082",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
