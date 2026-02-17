@@ -6,7 +6,7 @@ const keyToTimestamp = new Map<string, number>();
 
 function prune() {
   const now = Date.now();
-  for (const [key, ts] of keyToTimestamp.entries()) {
+  for (const [key, ts] of Array.from(keyToTimestamp.entries())) {
     if (now - ts > WINDOW_MS) keyToTimestamp.delete(key);
   }
 }
