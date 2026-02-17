@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "The Evolution of the Internet | Cloud Communication LLC",
+  title: "The Evolution of the Internet | Cloud Telecommunications",
   description:
     "Explore the history of the internet from ARPANET to modern fiber infrastructure and nationwide broadband expansion.",
 };
@@ -127,10 +127,10 @@ export default function EvolutionOfTheInternetPage() {
       <Section className="bg-slate-50">
         <Container>
           <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-2">
-            Cloud Communication LLC in the Modern Era
+            Cloud Telecommunications in the Modern Era
           </h2>
           <p className="text-slate-600 max-w-3xl mb-6">
-            With 45+ years of industry leadership under Terry Dickman and 35+ years of company experience, Cloud Communication LLC has been part of the fiber infrastructure evolution since the early commercial internet era.
+            With 45+ years of industry leadership under Terry Dickman and 35+ years of company experience, Cloud Telecommunications has been part of the fiber infrastructure evolution since the early commercial internet era.
           </p>
           <ul className="space-y-2 text-slate-700 max-w-2xl">
             <li className="flex items-center gap-2">

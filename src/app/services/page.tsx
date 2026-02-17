@@ -4,12 +4,14 @@ import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { services } from "@/data/services";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Services",
   description:
-    "Fiber infrastructure services: backbone, data center, FTTH/FTTP, aerial, underground, splicing & testing, restoration & closeout. Cloud Communication LLC.",
-};
+    "Fiber infrastructure services: backbone, data center, FTTH/FTTP, aerial, underground, splicing & testing, restoration & closeout.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

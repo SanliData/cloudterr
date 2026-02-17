@@ -31,7 +31,7 @@ export default function CareersPage() {
             Careers / Subcontractors
           </h1>
           <p className="mt-4 text-lg text-slate-600">
-            Join our team as a W2 hire or partner as a subcontractor. We’re building fiber infrastructure across Texas and beyond.
+            Join our team as a W2 hire or partner as a subcontractor. We’re building fiber infrastructure nationwide.
           </p>
         </Section>
       </section>
@@ -67,7 +67,7 @@ export default function CareersPage() {
             <div>
               <h2 className="text-xl font-semibold text-slate-900 mb-3">Open roles</h2>
               <p className="text-slate-600 mb-4">
-                We hire foremen, HDD operators, fiber splicers, locators, and crew leads. Full-time and project-based positions in DFW and Texas.
+                We hire foremen, HDD operators, fiber splicers, locators, and crew leads. Full-time and project-based positions.
               </p>
               <ul className="space-y-1 text-slate-700">
                 {roles.map((r) => (

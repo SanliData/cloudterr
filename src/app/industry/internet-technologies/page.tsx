@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Internet Technologies | Cloud Communication LLC",
+  title: "Internet Technologies | Cloud Telecommunications",
   description:
     "Explore the core internet technologies powering backbone networks, FTTH deployments, data center interconnects, and modern fiber infrastructure.",
 };
@@ -129,7 +129,7 @@ export default function InternetTechnologiesPage() {
             Physical Infrastructure Enables Digital Performance
           </h2>
           <p className="text-slate-600 max-w-3xl leading-relaxed">
-            All advanced transmission systems—from coherent 400G to GPON—depend on properly installed underground and aerial fiber infrastructure. OSP construction quality, splicing precision, restoration standards, and documentation practices directly affect signal integrity and long-term reliability. Cloud Communication LLC provides the construction layer that makes these technologies operational in the field.
+            All advanced transmission systems—from coherent 400G to GPON—depend on properly installed underground and aerial fiber infrastructure. OSP construction quality, splicing precision, restoration standards, and documentation practices directly affect signal integrity and long-term reliability. Cloud Telecommunications provides the construction layer that makes these technologies operational in the field.
           </p>
         </Container>
       </Section>

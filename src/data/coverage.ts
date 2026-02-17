@@ -1,6 +1,6 @@
 export const coverage = {
   primary: {
-    label: "DFW & North Texas",
+    label: "Primary service areas",
     counties: [
       "Collin",
       "Dallas",
@@ -37,7 +37,7 @@ export const coverage = {
     ],
   },
   texas: {
-    label: "Texas Expansion",
+    label: "Expansion areas",
     areas: [
       "Houston metro",
       "San Antonio metro",
@@ -48,5 +48,5 @@ export const coverage = {
     ],
   },
   mobilization:
-    "Crews available for statewide deployments; rapid response options for qualified projects.",
+    "Crews available for deployments; rapid response options for qualified projects.",
 } as const;

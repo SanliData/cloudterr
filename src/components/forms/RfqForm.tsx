@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import { FormFieldInput, FormFieldSelect, FormFieldTextarea, FormFieldCheckbox } from "@/components/ui/FormField";
 import { Button } from "@/components/ui/Button";
 import { Toast } from "@/components/ui/Toast";
+import { validateInput, sanitizePayload } from "@/lib/rfq";
 
 const projectTypeOptions = [
   { value: "backbone", label: "Backbone / Long-Haul" },
@@ -18,37 +19,83 @@ const projectTypeOptions = [
 
 export function RfqForm() {
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitting, setSubmitting] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const payload: Record<string, string | File | undefined> = {};
+    const raw: Record<string, unknown> = {};
     data.forEach((value, key) => {
-      payload[key] = value instanceof File ? value : (value as string);
+      if (key === "file") return;
+      raw[key] = value instanceof File ? undefined : value;
     });
-    // Client-side validation
-    const newErrors: Record<string, string> = {};
-    if (!payload.company?.toString().trim()) newErrors.company = "Company is required.";
-    if (!payload.name?.toString().trim()) newErrors.name = "Name is required.";
-    if (!payload.email?.toString().trim()) newErrors.email = "Email is required.";
-    const email = payload.email?.toString();
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) newErrors.email = "Enter a valid email.";
-    if (!payload.consent) newErrors.consent = "Consent is required.";
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    const payload = sanitizePayload(raw);
+    const { ok, errors: validationErrors } = validateInput(payload);
+    if (!ok) {
+      setErrors(validationErrors);
       return;
     }
     setErrors({});
-    console.log("RFQ Form Data (JSON):", JSON.stringify(Object.fromEntries(data.entries()), null, 2));
-    form.reset();
-    setShowToast(true);
+    setSubmitting(true);
+
+    const body = { ...payload, website: (raw.website as string) ?? "" };
+
+    try {
+      const res = await fetch("/api/rfq", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const json = await res.json().catch(() => ({}));
+
+      if (res.ok && json.success) {
+        form.reset();
+        setShowToast(true);
+        setToastMessage("RFQ gönderildi. En kısa sürede size dönüş yapacağız.");
+        return;
+      }
+
+      if (res.status === 400 && json.errors) {
+        setErrors(json.errors);
+        return;
+      }
+
+      if (res.status === 429) {
+        setToastMessage(json.error || "Çok fazla istek. Lütfen birkaç dakika sonra tekrar deneyin.");
+        setShowToast(true);
+        return;
+      }
+
+      if (res.status === 403) {
+        setToastMessage("Güvenlik nedeniyle işlem reddedildi.");
+        setShowToast(true);
+        return;
+      }
+
+      setToastMessage(json.error || "Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan e-posta ile ulaşın.");
+      setShowToast(true);
+    } catch {
+      setToastMessage("Bağlantı hatası. Lütfen tekrar deneyin.");
+      setShowToast(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
     <>
       <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px" }}
+          aria-hidden
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FormFieldInput
             label="Company"
@@ -99,6 +146,7 @@ export function RfqForm() {
           name="scope"
           rows={4}
           placeholder="Brief description of project scope"
+          maxLength={2000}
         />
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-1">
@@ -117,11 +165,11 @@ export function RfqForm() {
           required
           error={errors.consent}
         />
-        <Button type="submit" variant="primary" size="lg">
-          Submit RFQ
+        <Button type="submit" variant="primary" size="lg" disabled={submitting}>
+          {submitting ? "Gönderiliyor…" : "Submit RFQ"}
         </Button>
       </form>
-      <Toast show={showToast} onClose={() => setShowToast(false)} message="RFQ submitted. We'll be in touch." />
+      <Toast show={showToast} onClose={() => setShowToast(false)} message={toastMessage} />
     </>
   );
 }

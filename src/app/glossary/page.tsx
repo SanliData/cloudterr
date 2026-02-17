@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Industry terminology and technical reference for U.S. fiber infrastructure construction: backbone, underground, aerial, FTTH, splicing, testing, and compliance standards.",
   openGraph: {
-    title: "Fiber Infrastructure Glossary | Cloud Communication LLC",
+    title: "Fiber Infrastructure Glossary | Cloud Telecommunications",
     description:
       "Technical glossary for fiber infrastructure: OSP, HDD, FTTH, OTDR, 811, ROW, and more.",
   },

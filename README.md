@@ -1,4 +1,4 @@
-# Cloud Communication LLC — Marketing Website
+# Cloud Telecommunications — Marketing Website (www.cloudtelc.com)
 
 Production-ready marketing site for a US-based fiber infrastructure contractor. Built with **Next.js 14** (App Router), **TypeScript**, and **TailwindCSS**.
 

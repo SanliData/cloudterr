@@ -8,9 +8,9 @@ import { internationalCooperation } from "@/data/internationalCooperation";
 export const metadata: Metadata = {
   title: "International Cooperation",
   description:
-    "Strategic technical collaboration and industry alignment. Cloud Communication LLC collaborates with experienced international telecom infrastructure organizations for knowledge exchange and best-practice development.",
+    "Strategic technical collaboration and industry alignment. Cloud Telecommunications collaborates with experienced international telecom infrastructure organizations for knowledge exchange and best-practice development.",
   openGraph: {
-    title: "International Cooperation | Cloud Communication LLC",
+    title: "International Cooperation | Cloud Telecommunications",
     description:
       "Strategic technical collaboration and international partner relationships in fiber infrastructure.",
   },
@@ -34,7 +34,7 @@ export default function InternationalCooperationPage() {
             Strategic Technical Collaboration & Industry Alignment
           </p>
           <p className="mt-4 text-slate-600">
-            Cloud Communication LLC collaborates with experienced international telecom infrastructure organizations to support knowledge exchange, best-practice alignment, and technical capability development for U.S.-based OSP construction.
+            Cloud Telecommunications collaborates with experienced international telecom infrastructure organizations to support knowledge exchange, best-practice alignment, and technical capability development for U.S.-based OSP construction.
           </p>
         </Section>
       </section>

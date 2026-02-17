@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Global and U.S. internet infrastructure maps, broadband data, and connectivity statistics. Submarine cables, FCC map, IXPs, and fiber backbone context.",
   openGraph: {
-    title: "Internet World | Cloud Communication LLC",
+    title: "Internet World | Cloud Telecommunications",
     description:
       "Global and U.S. internet infrastructure maps, broadband data, and connectivity statistics.",
   },
@@ -108,7 +108,7 @@ export default function InternetWorldPage() {
           <div>
             <h2 className="text-2xl font-bold mb-2">Fiber construction for this infrastructure</h2>
             <p className="text-slate-200">
-              Cloud Communication LLC delivers OSP construction for backbone, metro, and last-mile. Request an RFQ or explore our services.
+              Cloud Telecommunications delivers OSP construction for backbone, metro, and last-mile. Request an RFQ or explore our services.
             </p>
           </div>
           <div className="flex flex-wrap gap-4 shrink-0">

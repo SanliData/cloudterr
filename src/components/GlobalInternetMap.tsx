@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { MapFallbackCard } from "@/components/MapFallbackCard";
-
-const IFRAME_LOAD_TIMEOUT_MS = 4000;
 
 const MAP_SOURCES = [
   {
@@ -12,7 +10,6 @@ const MAP_SOURCES = [
     url: "https://www.submarinecablemap.com/",
     domain: "www.submarinecablemap.com",
     note: null,
-    embedBlocked: false,
   },
   {
     id: "cloudflare",
@@ -20,28 +17,14 @@ const MAP_SOURCES = [
     url: "https://radar.cloudflare.com/",
     domain: "radar.cloudflare.com",
     note: "Use the map navigation to view Internet traffic & outages.",
-    embedBlocked: true,
   },
 ] as const;
 
 export function GlobalInternetMap() {
   const [activeTab, setActiveTab] = useState<"submarine" | "cloudflare">("submarine");
-  const [submarineLoaded, setSubmarineLoaded] = useState(false);
-  const [submarineFallback, setSubmarineFallback] = useState(false);
-  const submarineTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const submarineSource = MAP_SOURCES[0];
   const cloudflareSource = MAP_SOURCES[1];
-
-  useEffect(() => {
-    submarineTimeoutRef.current = setTimeout(() => {
-      if (!submarineLoaded) setSubmarineFallback(true);
-    }, IFRAME_LOAD_TIMEOUT_MS);
-    return () => {
-      if (submarineTimeoutRef.current) clearTimeout(submarineTimeoutRef.current);
-    };
-  }, [submarineLoaded]);
-
   const activeSource = MAP_SOURCES.find((s) => s.id === activeTab)!;
 
   return (
@@ -86,31 +69,12 @@ export function GlobalInternetMap() {
         className={activeTab !== "submarine" ? "hidden" : ""}
       >
         {activeTab === "submarine" && (
-          <>
-            {submarineFallback ? (
-              <MapFallbackCard
-                sourceUrl={submarineSource.url}
-                sourceLabel={submarineSource.label}
-                variant="global"
-                reason="Harita bu sayfada gömülemiyor. Görmek için tıklayın."
-              />
-            ) : (
-              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-100">
-                <iframe
-                  title="Submarine Cable Map – Global submarine fiber cable routes"
-                  src="https://www.submarinecablemap.com/"
-                  className="absolute inset-0 w-full h-full"
-                  onLoad={() => {
-                    setSubmarineLoaded(true);
-                    if (submarineTimeoutRef.current) {
-                      clearTimeout(submarineTimeoutRef.current);
-                      submarineTimeoutRef.current = null;
-                    }
-                  }}
-                />
-              </div>
-            )}
-          </>
+          <MapFallbackCard
+            sourceUrl={submarineSource.url}
+            sourceLabel={submarineSource.label}
+            variant="global"
+            reason="Bu harita gömülmeye izin vermiyor. Görmek için tıklayın."
+          />
         )}
       </div>
 
@@ -147,7 +111,7 @@ export function GlobalInternetMap() {
         </a>
         <span className="text-slate-400">|</span>
         <p className="text-xs text-slate-500">
-          Source: {activeSource.domain} (third-party; not affiliated with Cloud Communication LLC)
+          Source: {activeSource.domain} (third-party; not affiliated with Cloud Telecommunications)
         </p>
       </div>
     </div>

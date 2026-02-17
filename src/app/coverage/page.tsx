@@ -7,7 +7,7 @@ import { coverage } from "@/data/coverage";
 export const metadata: Metadata = {
   title: "Coverage",
   description:
-    "Cloud Communication LLC service areas: DFW, North Texas, Texas expansion. Crews available for statewide deployments.",
+    "Cloud Telecommunications service areas. Crews available for deployments.",
 };
 
 export default function CoveragePage() {
@@ -17,7 +17,7 @@ export default function CoveragePage() {
         <Section containerClassName="max-w-3xl">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Coverage</h1>
           <p className="mt-4 text-lg text-slate-600">
-            Primary operations in DFW and North Texas; Texas expansion and nationwide project support where applicable.
+            Nationwide project support where applicable.
           </p>
         </Section>
       </section>
@@ -29,24 +29,13 @@ export default function CoveragePage() {
             <h2 className="text-xl font-semibold text-slate-900 mb-3">
               {coverage.primary.label}
             </h2>
-            <p className="text-slate-600 mb-2">Counties:</p>
-            <p className="text-slate-600">{coverage.primary.counties.join(", ")}</p>
-            <p className="text-slate-600 mt-4 mb-2">Major cities:</p>
-            <p className="text-slate-600">{coverage.primary.cities.join(", ")}</p>
+            <p className="text-slate-600">{coverage.mobilization}</p>
           </div>
         </div>
       </Section>
 
       <Section className="bg-slate-50">
-        <h2 className="text-xl font-semibold text-slate-900 mb-3">
-          {coverage.texas.label}
-        </h2>
-        <ul className="space-y-1 text-slate-600">
-          {coverage.texas.areas.map((area, i) => (
-            <li key={i}>• {area}</li>
-          ))}
-        </ul>
-        <p className="mt-6 text-slate-600">{coverage.mobilization}</p>
+        <p className="text-slate-600">{coverage.mobilization}</p>
         <Button href="/contact" variant="primary" className="mt-6">
           Schedule a call
         </Button>

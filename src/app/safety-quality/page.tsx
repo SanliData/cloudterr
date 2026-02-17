@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/Card";
 export const metadata: Metadata = {
   title: "Safety & Quality",
   description:
-    "OSHA compliance, 811 coordination, ROW, TCP, QC checkpoints. Cloud Communication LLC safety and quality standards.",
+    "OSHA compliance, 811 coordination, ROW, TCP, QC checkpoints. Cloud Telecommunications safety and quality standards.",
 };
 
 const sections = [

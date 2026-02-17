@@ -140,7 +140,7 @@ export function UsInternetMap() {
         </a>
         <span className="text-slate-400">|</span>
         <p className="text-xs text-slate-500">
-          Source: {activeSource.domain} (third-party; not affiliated with Cloud Communication LLC)
+          Source: {activeSource.domain} (third-party; not affiliated with Cloud Telecommunications)
         </p>
       </div>
     </div>

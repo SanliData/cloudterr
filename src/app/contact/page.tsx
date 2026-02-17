@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { company } from "@/data/company";
 import { RfqForm } from "@/components/forms/RfqForm";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact / RFQ",
-  description: "Contact Cloud Communication LLC. Submit an RFQ or reach our operations team. Dallas/DFW, Texas.",
-};
+  description: "Contact us. Submit an RFQ or reach our operations team. ",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

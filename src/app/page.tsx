@@ -32,6 +32,13 @@ export default function HomePage() {
               Speak to Ops
             </Button>
           </div>
+          <div className="mt-14 pt-10 border-t border-white/20 max-w-2xl">
+            <h2 className="text-xl font-semibold text-white">Built on 40+ Years of Field Leadership</h2>
+            <p className="mt-3 text-slate-300 leading-relaxed">
+              Since 1977, our founder has led outside plant and infrastructure operations across complex field environments. Today, Cloud Telecommunications continues that operational discipline — delivering safe, accountable, and performance-driven fiber infrastructure.
+            </p>
+            <p className="mt-4 text-slate-400 italic">— Terry Dickman</p>
+          </div>
         </Container>
       </section>
 
@@ -77,19 +84,9 @@ export default function HomePage() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Coverage</h2>
             <p className="text-slate-600 mb-4">
-              DFW and North Texas primary; Texas expansion and nationwide project support where applicable.
+              Nationwide project support where applicable.
             </p>
-            <ul className="space-y-2 text-slate-700">
-              <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-accent" />
-                <strong>{coverage.primary.label}:</strong> {coverage.primary.counties.slice(0, 5).join(", ")}…
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-accent" />
-                <strong>{coverage.texas.label}:</strong> {coverage.texas.areas.join(", ")}
-              </li>
-            </ul>
-            <p className="mt-4 text-sm text-slate-600">{coverage.mobilization}</p>
+            <p className="text-sm text-slate-600">{coverage.mobilization}</p>
             <Button href="/coverage" variant="primary" className="mt-4">
               View coverage
             </Button>

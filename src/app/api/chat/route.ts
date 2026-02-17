@@ -2,13 +2,27 @@ import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { classifyIntent, telemetryLog } from "@/lib/classifier";
 import { handleGlossary, handleLead, getProjectGuidancePrompt } from "@/lib/modeHandlers";
+import { checkRateLimit } from "@/lib/rateLimit";
 
 const openai = process.env.OPENAI_API_KEY
   ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
   : null;
 
+function getClientIp(req: NextRequest): string {
+  const forwarded = req.headers.get("x-forwarded-for");
+  if (forwarded) return forwarded.split(",")[0].trim();
+  return req.headers.get("x-real-ip") ?? "unknown";
+}
+
 export async function POST(req: NextRequest) {
   try {
+    const ip = getClientIp(req);
+    if (!checkRateLimit(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests", reply: "Please try again later.", mode: "fallback" },
+        { status: 429 }
+      );
+    }
     const body = await req.json();
     const userMessage = typeof body.message === "string" ? body.message.trim() : "";
 

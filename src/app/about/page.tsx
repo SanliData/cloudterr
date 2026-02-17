@@ -3,11 +3,14 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { company } from "@/data/company";
 import { PrequalCta } from "@/components/PrequalCta";
+import { Timeline } from "@/components/Timeline";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About",
-  description: `About Cloud Communication LLC — ${company.experienceYears}+ years fiber infrastructure experience. Leadership, mission, and values.`,
-};
+  description: `About ${company.name} — ${company.experienceYears}+ years fiber infrastructure experience. Leadership, mission, and values.`,
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -29,26 +32,22 @@ export default function AboutPage() {
       </Section>
 
       <Section className="bg-slate-50">
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">Leadership</h2>
-        <div className="flex flex-col sm:flex-row gap-6">
+        <h2 className="text-2xl font-bold text-slate-900 mb-2">Leadership</h2>
+        <p className="text-slate-600 mb-6">
+          {company.leadership.name} — {company.leadership.title}. {company.leadership.experienceYears}+ years of telecom infrastructure experience.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-6 mb-8">
           <div className="w-20 h-20 rounded-full bg-accent/20 shrink-0" aria-hidden />
-          <div>
-            <p className="font-semibold text-slate-900 text-lg">
-              {company.leadership.name}
-            </p>
-            <p className="text-accent font-medium">{company.leadership.title}</p>
-            <p className="mt-2 text-slate-600">
-              {company.leadership.experienceYears}+ years of telecom infrastructure experience.
-            </p>
-            <p className="mt-3 text-slate-600">{company.leadership.bio}</p>
-          </div>
+          <p className="text-slate-600 max-w-2xl">{company.leadership.bio}</p>
         </div>
+        <h3 className="text-lg font-semibold text-slate-900 mb-4">Leadership timeline</h3>
+        <Timeline />
       </Section>
 
       <Section>
         <h2 className="text-2xl font-bold text-slate-900 mb-4">Company Experience</h2>
         <p className="text-slate-600 max-w-3xl">
-          {company.name} brings {company.experienceYears}+ years of operational fiber construction experience to every project. Our crews and project teams have built backbone, data center, FTTH, and municipal networks across Texas and beyond. We mobilize for statewide deployments and support nationwide projects where applicable.
+          {company.name} brings {company.experienceYears}+ years of operational fiber construction experience to every project. Our crews and project teams have built backbone, data center, FTTH, and municipal networks. We support nationwide projects where applicable.
         </p>
       </Section>
 

@@ -1,6 +1,7 @@
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/capabilities", label: "Capabilities" },
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
   { href: "/coverage", label: "Coverage" },
@@ -30,6 +31,7 @@ export const footerSections = [
     title: "Company",
     links: [
       { href: "/about", label: "About" },
+      { href: "/capabilities", label: "Capabilities" },
       { href: "/projects", label: "Projects" },
       { href: "/coverage", label: "Coverage" },
       { href: "/safety-quality", label: "Safety & Quality" },

@@ -3,31 +3,35 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { footerSections } from "@/data/nav";
 import { company } from "@/data/company";
+import { marka } from "@/data/veri/marka";
 
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
       <Container>
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <Link
               href="/"
               className="inline-block focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded"
-              aria-label="Cloud Communication LLC – Home"
+              aria-label="Cloud Telecommunications – Home"
             >
               <Image
                 src="/logo.png"
-                alt="Cloud Communication LLC – Fiber Infrastructure & Construction"
-                width={200}
-                height={72}
-                className="h-16 w-auto object-contain"
+                alt="Cloud Telecommunications – Fiber Infrastructure & Construction"
+                width={320}
+                height={115}
+                className="h-24 sm:h-28 w-auto object-contain"
               />
             </Link>
             <p className="mt-2 text-sm text-slate-600">
-              Fiber infrastructure & construction. Dallas/DFW and Texas expansion.
+              FIBER INFRASTRUCTURE & CONSTRUCTION
             </p>
             <p className="mt-2 text-sm text-slate-600">
-              {company.contact.email}
+              <a href={`mailto:${company.contact.email}`} className="hover:text-accent">{company.contact.email}</a>
+            </p>
+            <p className="text-sm text-slate-600">
+              <a href="https://www.cloudtelc.com" className="hover:text-accent" rel="noopener noreferrer">www.cloudtelc.com</a>
             </p>
             <p className="text-sm text-slate-600">{company.contact.phone}</p>
           </div>
@@ -52,7 +56,7 @@ export function Footer() {
           ))}
         </div>
         <div className="border-t border-slate-200 py-6 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} Cloud Communication LLC. All rights reserved.
+          © {new Date().getFullYear()} {marka.legalName}. All rights reserved.
         </div>
       </Container>
     </footer>

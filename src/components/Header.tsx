@@ -21,14 +21,14 @@ export function Header() {
           <Link
             href="/"
             className="flex items-center shrink-0 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded"
-            aria-label="Cloud Communication LLC – Ana sayfa"
+            aria-label="Cloud Telecommunications – Ana sayfa"
           >
             <Image
               src="/logo.png"
-              alt="Cloud Communication LLC – Fiber Infrastructure & Construction"
-              width={280}
-              height={100}
-              className="h-20 w-auto object-contain"
+              alt="Cloud Telecommunications – Fiber Infrastructure & Construction"
+              width={560}
+              height={200}
+              className="h-16 md:h-28 lg:h-44 w-auto object-contain"
               priority
             />
           </Link>

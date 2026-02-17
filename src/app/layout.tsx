@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FiberChat } from "@/components/FiberChat";
+import { defaultMetadata } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,21 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Cloud Communication LLC | Fiber Infrastructure & Construction",
-    template: "%s | Cloud Communication LLC",
-  },
-  description:
-    "US-based fiber infrastructure contractor. Backbone to broadband — underground, aerial, HDD, splicing, testing. Dallas/DFW and Texas. Carriers, data centers, municipalities, GCs.",
-  icons: {
-    icon: "/logo.png",
-  },
-  openGraph: {
-    title: "Cloud Communication LLC | Fiber Infrastructure & Construction",
-    description:
-      "US-based fiber infrastructure contractor. Backbone to broadband. Dallas/DFW and Texas.",
-    type: "website",
-  },
+  ...defaultMetadata,
+  icons: { icon: "/logo.png" },
 };
 
 export default function RootLayout({
