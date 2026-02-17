@@ -1,0 +1,29 @@
+# Push to main -> DigitalOcean Droplet'ta otomatik deploy (cloudtelc.com)
+# Gerekli secrets: SSH_HOST, SSH_USER, SSH_PRIVATE_KEY
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd /var/www/cloudtelc
+            git fetch origin
+            git reset --hard origin/main
+            npm install
+            npm run build
+            pm2 restart cloudtelc
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
