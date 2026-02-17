@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- Sky -->
+  <rect width="800" height="500" fill="#e2e8f0"/>
+  <!-- Ground / road -->
+  <path d="M0 380 L0 500 L800 500 L800 320 Q800 280 760 280 L40 280 Q0 280 0 320 Z" fill="#64748b"/>
+  <rect x="0" y="320" width="800" height="180" fill="#475569"/>
+  <!-- Road stripe -->
+  <rect x="0" y="398" width="800" height="4" fill="#94a3b8" opacity="0.6"/>
+  <!-- Trench -->
+  <path d="M180 500 L180 340 L380 340 L380 500 Z" fill="#334155"/>
+  <path d="M180 360 L220 360 L220 500 M260 360 L300 360 L300 500 M340 360 L380 360 L380 500" stroke="#1e293b" stroke-width="3" fill="none"/>
+  <!-- Orange conduits in trench -->
+  <line x1="200" y1="350" x2="360" y2="350" stroke="#ea580c" stroke-width="12" stroke-linecap="round"/>
+  <line x1="200" y1="365" x2="360" y2="365" stroke="#c2410c" stroke-width="10" stroke-linecap="round"/>
+  <line x1="200" y1="378" x2="360" y2="378" stroke="#ea580c" stroke-width="10" stroke-linecap="round"/>
+  <!-- Dirt pile -->
+  <ellipse cx="420" cy="420" rx="70" ry="35" fill="#a16207"/>
+  <ellipse cx="415" cy="415" rx="55" ry="28" fill="#ca8a04"/>
+  <!-- Trailer with spools -->
+  <rect x="480" y="320" width="200" height="60" rx="4" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <circle cx="520" cy="450" r="18" fill="#334155"/>
+  <circle cx="520" cy="450" r="12" fill="#475569"/>
+  <circle cx="660" cy="450" r="18" fill="#334155"/>
+  <circle cx="660" cy="450" r="12" fill="#475569"/>
+  <!-- Orange spool left -->
+  <circle cx="540" cy="350" r="42" fill="#f8fafc" stroke="#c2410c" stroke-width="8"/>
+  <circle cx="540" cy="350" r="28" fill="#e2e8f0"/>
+  <circle cx="540" cy="350" r="8" fill="#94a3b8"/>
+  <!-- Orange spool right -->
+  <circle cx="640" cy="350" r="42" fill="#f8fafc" stroke="#ea580c" stroke-width="8"/>
+  <circle cx="640" cy="350" r="28" fill="#e2e8f0"/>
+  <circle cx="640" cy="350" r="8" fill="#94a3b8"/>
+  <!-- Pickup truck -->
+  <rect x="260" y="300" width="160" height="75" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="268" y="308" width="70" height="50" rx="3" fill="#cbd5e1"/>
+  <rect x="348" y="308" width="62" height="50" rx="3" fill="#e2e8f0"/>
+  <circle cx="290" cy="378" r="14" fill="#334155"/>
+  <circle cx="290" cy="378" r="8" fill="#64748b"/>
+  <circle cx="390" cy="378" r="14" fill="#334155"/>
+  <circle cx="390" cy="378" r="8" fill="#64748b"/>
+  <!-- Worker figure left -->
+  <ellipse cx="230" cy="355" rx="14" ry="16" fill="#1e293b"/>
+  <path d="M216 372 L220 420 L228 420 L224 372 Z" fill="#334155"/>
+  <path d="M244 372 L248 410 L256 408 L252 372 Z" fill="#334155"/>
+  <path d="M222 418 L218 455 L238 455 L234 418 Z" fill="#475569"/>
+  <!-- Worker figure right (near trailer) -->
+  <ellipse cx="455" cy="365" rx="12" ry="14" fill="#1e293b"/>
+  <path d="M443 378 L446 415 L454 415 L450 378 Z" fill="#334155"/>
+  <path d="M467 378 L470 412 L478 410 L474 378 Z" fill="#334155"/>
+  <path d="M448 414 L445 448 L462 448 L458 414 Z" fill="#ea580c" opacity="0.9"/>
+  <!-- Utility pole -->
+  <rect x="720" y="180" width="16" height="320" fill="#57534e"/>
+  <rect x="718" y="200" width="20" height="8" fill="#44403c"/>
+  <rect x="718" y="280" width="20" height="8" fill="#44403c"/>
+  <rect x="718" y="360" width="20" height="8" fill="#44403c"/>
+  <!-- Building background -->
+  <rect x="80" y="180" width="120" height="100" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="92" y="192" width="28" height="35" fill="#e2e8f0"/>
+  <rect x="128" y="192" width="28" height="35" fill="#e2e8f0"/>
+  <rect x="164" y="192" width="28" height="35" fill="#e2e8f0"/>
+  <!-- Conduit from spool to trench -->
+  <path d="M498 340 Q440 330 380 345" stroke="#ea580c" stroke-width="6" stroke-linecap="round" fill="none"/>
+</svg>
