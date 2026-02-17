@@ -14,8 +14,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Lead storage (RFQ)
-data/
+# Lead storage (RFQ) — only root-level data/, not src/data/
+/data/
 
 # Env
 .env
