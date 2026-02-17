@@ -10,7 +10,7 @@ const ipMap = new Map<string, { count: number; resetAt: number }>();
 
 function prune() {
   const now = Date.now();
-  for (const [key, value] of ipMap.entries()) {
+  for (const [key, value] of Array.from(ipMap.entries())) {
     if (value.resetAt < now) ipMap.delete(key);
   }
 }
