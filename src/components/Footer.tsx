@@ -18,22 +18,12 @@ export function Footer() {
             >
               <Image
                 src="/logo.png"
-                alt="Cloud Telecommunications – Fiber Infrastructure & Construction"
+                alt="Cloud Telecommunications"
                 width={320}
                 height={115}
                 className="h-24 sm:h-28 w-auto object-contain"
               />
             </Link>
-            <p className="mt-2 text-sm text-slate-600">
-              FIBER INFRASTRUCTURE & CONSTRUCTION
-            </p>
-            <p className="mt-2 text-sm text-slate-600 break-all">
-              <a href={`mailto:${company.contact.email}`} className="hover:text-accent">{company.contact.email}</a>
-            </p>
-            <p className="text-sm text-slate-600 break-all">
-              <a href="https://www.cloudtelc.com" className="hover:text-accent" rel="noopener noreferrer">www.cloudtelc.com</a>
-            </p>
-            <p className="text-sm text-slate-600">{company.contact.phone}</p>
           </div>
           {footerSections.map((section) => (
             <div key={section.title}>
