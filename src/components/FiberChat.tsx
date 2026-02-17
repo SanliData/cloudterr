@@ -158,11 +158,11 @@ export function FiberChat() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-4 py-3 min-h-[48px] text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
         aria-label="Ask a Fiber Expert"
       >
-        <MessageCircle className="h-5 w-5" />
-        <span className="font-medium">Ask a Fiber Expert</span>
+        <MessageCircle className="h-5 w-5 shrink-0" />
+        <span className="font-medium hidden sm:inline">Ask a Fiber Expert</span>
       </button>
 
       <div
@@ -177,14 +177,14 @@ export function FiberChat() {
           aria-hidden
         />
         <div className="absolute right-0 top-0 h-full w-full max-w-md flex flex-col bg-white shadow-2xl">
-          <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
-            <h2 className="text-lg font-semibold text-slate-900">
+          <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 shrink-0">
+            <h2 className="text-base sm:text-lg font-semibold text-slate-900 truncate pr-2">
               Fiber Infrastructure Assistant
             </h2>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-700"
+              className="rounded-lg p-3 min-h-[44px] min-w-[44px] flex items-center justify-center text-slate-500 hover:bg-slate-100 hover:text-slate-700 shrink-0"
               aria-label="Close chat"
             >
               <X className="h-5 w-5" />
@@ -198,7 +198,7 @@ export function FiberChat() {
                 className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-2xl px-4 py-2.5 ${
+                  className={`max-w-[95%] sm:max-w-[85%] rounded-2xl px-4 py-2.5 ${
                     m.role === "user"
                       ? "bg-primary text-white"
                       : "bg-slate-100 text-slate-900"

@@ -7,9 +7,19 @@
   --background: #f8fafc;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+/* Prevent horizontal overflow on small screens */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 @layer utilities {

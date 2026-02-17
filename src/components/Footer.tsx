@@ -27,10 +27,10 @@ export function Footer() {
             <p className="mt-2 text-sm text-slate-600">
               FIBER INFRASTRUCTURE & CONSTRUCTION
             </p>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-slate-600 break-all">
               <a href={`mailto:${company.contact.email}`} className="hover:text-accent">{company.contact.email}</a>
             </p>
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-slate-600 break-all">
               <a href="https://www.cloudtelc.com" className="hover:text-accent" rel="noopener noreferrer">www.cloudtelc.com</a>
             </p>
             <p className="text-sm text-slate-600">{company.contact.phone}</p>

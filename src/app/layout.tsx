@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -10,6 +10,12 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -23,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen flex flex-col font-sans antialiased" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col font-sans antialiased overflow-x-hidden" suppressHydrationWarning>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

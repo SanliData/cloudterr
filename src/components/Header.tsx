@@ -56,9 +56,10 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="rounded-lg p-2 text-slate-600 hover:bg-slate-100"
+              className="rounded-lg p-3 min-h-[44px] min-w-[44px] flex items-center justify-center text-slate-600 hover:bg-slate-100"
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
               {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -67,17 +68,17 @@ export function Header() {
         <div
           id="mobile-menu"
           className={`md:hidden overflow-hidden transition-all duration-200 ${
-            mobileOpen ? "max-h-96 pb-4" : "max-h-0"
+            mobileOpen ? "max-h-[70vh] pb-4" : "max-h-0"
           }`}
           aria-hidden={!mobileOpen}
         >
-          <ul className="flex flex-col gap-2 border-t border-slate-200 pt-4">
+          <ul className="flex flex-col gap-0 border-t border-slate-200 pt-2 overflow-y-auto max-h-[65vh]">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-2 text-slate-600 hover:text-accent font-medium"
+                  className="block py-3 px-2 text-slate-600 hover:text-accent hover:bg-slate-50 font-medium min-h-[44px] flex items-center"
                 >
                   {link.label}
                 </Link>

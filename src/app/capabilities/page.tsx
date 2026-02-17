@@ -77,7 +77,7 @@ export default function CapabilitiesPage() {
           </div>
 
           <div className="lg:pt-0">
-            <div className="rounded-lg border border-slate-200 bg-slate-50 p-5 sticky top-24">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-5 lg:sticky lg:top-24">
               <h2 className="text-lg font-bold text-slate-900 mb-4">Company Data</h2>
               <dl className="space-y-2 text-sm">
                 <div>
