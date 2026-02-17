@@ -54,9 +54,9 @@ if ! command -v pm2 &>/dev/null; then
   sudo npm install -g pm2
 fi
 
-# Bağımlılıklar ve build
+# Bağımlılıklar ve build (devDependencies gerekli: tailwindcss, postcss, autoprefixer)
 echo "[setup] npm install & build..."
-npm ci --omit=dev 2>/dev/null || npm install
+npm install
 npm run build
 
 # Nginx site config
