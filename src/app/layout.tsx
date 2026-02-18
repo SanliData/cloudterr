@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FiberChat } from "@/components/FiberChat";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { defaultMetadata } from "@/lib/seo";
 
 const inter = Inter({
@@ -34,6 +35,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FiberChat />
+        <WhatsAppButton />
       </body>
     </html>
   );

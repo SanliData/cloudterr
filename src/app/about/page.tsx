@@ -33,9 +33,16 @@ export default function AboutPage() {
 
       <Section className="bg-slate-50">
         <h2 className="text-2xl font-bold text-slate-900 mb-2">Leadership</h2>
-        <p className="text-slate-600 mb-6">
+        <p className={`text-slate-600 ${company.leadership.email ? "mb-2" : "mb-6"}`}>
           {company.leadership.name} — {company.leadership.title}. {company.leadership.experienceYears}+ years of telecom infrastructure experience.
         </p>
+        {company.leadership.email && (
+          <p className="text-slate-600 mb-6">
+            <a href={`mailto:${company.leadership.email}`} className="text-accent hover:underline">
+              {company.leadership.email}
+            </a>
+          </p>
+        )}
         <div className="flex flex-col sm:flex-row gap-6 mb-8">
           <div className="w-20 h-20 rounded-full bg-accent/20 shrink-0" aria-hidden />
           <p className="text-slate-600 max-w-2xl">{company.leadership.bio}</p>

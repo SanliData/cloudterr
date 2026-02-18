@@ -44,6 +44,7 @@ export const liderlikZamanCizelgesi: LiderlikZamanCizelgesiItem[] = [
 export const liderlikOzet = {
   ad: "Terry Dickman",
   unvan: "General Manager / Founder",
+  email: "terrydickman@cloudtelc.com",
   deneyimYil: 45,
   ozet:
     "The Leadership Journey: From Outdoor Installation Supervisor to Founder of Cloud Telecommunications. Terry Dickman's infrastructure career began in 1977 as an On-Site Installation (OSP) Supervisor, overseeing field teams responsible for cable installation, network expansion, and commissioning of critical telecommunications infrastructure. This journey, starting with outdoor installation construction, evolved into a lifelong commitment to on-site focused infrastructure implementation. Over the decades, his experience expanded through large-scale operations, contractor supervision, security leadership, and complex infrastructure environments. However, the core principles remained unchanged: disciplined on-site management, operational accountability, and on-site results. Today, that same operational foundation continues through Cloud Telecommunications; the principles established in 1977 still define the company's approach: On-site leadership, infrastructure precision, security-focused implementation, contractor and team discipline, and budget and timeline control. Cloud Telecommunications is not a theoretical telecommunications venture. It is the continuation of an infrastructure career proven in the field for over forty years.",

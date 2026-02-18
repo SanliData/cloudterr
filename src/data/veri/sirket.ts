@@ -17,8 +17,12 @@ export const sirket = {
     "Carrier and municipal-grade quality",
   ],
   contact: {
-    phone: "(555) 123-4567",
+    phone: "(682) 333-6369",
+    whatsapp: "+905309168888",
     email: "info@cloudtelc.com",
+    contactEmail: "contact@cloudtelc.com",
+    supportEmail: "support@cloudtelc.com",
+    adminEmail: "admin@cloudtelc.com",
     address: "",
     hours: "Mon–Fri 7:00 AM – 6:00 PM CT",
     schedulingNote:

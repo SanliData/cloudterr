@@ -45,8 +45,16 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="border-t border-slate-200 py-6 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} {marka.legalName}. All rights reserved.
+        <div className="border-t border-slate-200 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
+            <a href={`tel:${company.contact.phone.replace(/\D/g, "")}`} className="hover:text-accent">
+              {company.contact.phone}
+            </a>
+            <a href={`mailto:${company.contact.email}`} className="hover:text-accent">
+              {company.contact.email}
+            </a>
+          </div>
+          <span>© {new Date().getFullYear()} {marka.legalName}. All rights reserved.</span>
         </div>
       </Container>
     </footer>

@@ -26,10 +26,24 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-1 space-y-6">
             <div>
-              <h2 className="text-lg font-semibold text-slate-900">Office</h2>
+              <h2 className="text-lg font-semibold text-slate-900">Office / İletişim</h2>
               <p className="mt-1 text-slate-600">{company.contact.address}</p>
-              <p className="mt-1 text-slate-600">{company.contact.phone}</p>
-              <p className="mt-1 text-slate-600">{company.contact.email}</p>
+              <p className="mt-1 text-slate-600">
+                <a href={`tel:${company.contact.phone.replace(/\D/g, "")}`} className="text-accent hover:underline">
+                  {company.contact.phone}
+                </a>
+              </p>
+              <p className="mt-1 text-slate-600">
+                <a href={`mailto:${company.contact.email}`} className="text-accent hover:underline">
+                  {company.contact.email}
+                </a>
+              </p>
+              <p className="mt-1 text-sm text-slate-500">
+                Contact / RFQ:{" "}
+                <a href={`mailto:${company.contact.contactEmail}`} className="text-accent hover:underline">
+                  {company.contact.contactEmail}
+                </a>
+              </p>
             </div>
             <div>
               <h2 className="text-lg font-semibold text-slate-900">Business hours</h2>

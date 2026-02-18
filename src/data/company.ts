@@ -13,6 +13,7 @@ export const company = {
   leadership: {
     name: liderlikOzet.ad,
     title: liderlikOzet.unvan,
+    email: liderlikOzet.email,
     experienceYears: liderlikOzet.deneyimYil,
     bio: liderlikOzet.ozet,
   },
