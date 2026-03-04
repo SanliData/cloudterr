@@ -1,7 +1,6 @@
-# SanliData/cloudterr main branch'e push -> canlı deploy (www.cloudtelc.com)
-# Sunucuda origin = https://github.com/SanliData/cloudterr.git olmalı
-# Gerekli secrets: SSH_HOST, SSH_USER, SSH_PRIVATE_KEY
-name: Deploy to DigitalOcean
+# SanliData/cloudtelc repo'suna push -> canlı sunucuya deploy
+# Bu workflow cloudtelc reposunda çalışır. Secrets: SSH_HOST, SSH_USER, SSH_PRIVATE_KEY
+name: Deploy from cloudtelc
 
 on:
   push:
@@ -11,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via SSH
+      - name: Deploy via SSH (pull from cloudtelc)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -20,8 +19,8 @@ jobs:
           script: |
             set -e
             cd /var/www/cloudtelc
-            git fetch origin
-            git reset --hard origin/main
+            git fetch https://github.com/SanliData/cloudtelc.git main
+            git reset --hard FETCH_HEAD
             npm install
             npm run build
             pm2 restart cloudtelc

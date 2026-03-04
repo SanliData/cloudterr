@@ -1,11 +1,48 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { footerSections } from "@/data/nav";
 import { company } from "@/data/company";
 import { marka } from "@/data/veri/marka";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+
+const footerStructure = [
+  {
+    titleKey: "services" as const,
+    links: [
+      { href: "/services", labelKey: "overview" as const },
+      { href: "/services/backbone-longhaul", labelKey: "backboneLonghaul" as const },
+      { href: "/services/data-center", labelKey: "dataCenter" as const },
+      { href: "/services/ftth-fttp", labelKey: "ftthFttp" as const },
+      { href: "/services/aerial", labelKey: "aerial" as const },
+      { href: "/services/underground", labelKey: "underground" as const },
+      { href: "/services/splicing-testing", labelKey: "splicingTesting" as const },
+      { href: "/services/restoration-closeout", labelKey: "restorationCloseout" as const },
+    ],
+  },
+  {
+    titleKey: "company" as const,
+    links: [
+      { href: "/about", labelKey: "about" as const },
+      { href: "/capabilities", labelKey: "capabilities" as const },
+      { href: "/projects", labelKey: "projects" as const },
+      { href: "/coverage", labelKey: "coverage" as const },
+      { href: "/safety-quality", labelKey: "safetyQuality" as const },
+      { href: "/international-cooperation", labelKey: "internationalCooperation" as const },
+      { href: "/internet-world", labelKey: "internetWorld" as const },
+      { href: "/glossary", labelKey: "glossary" as const },
+      { href: "/careers", labelKey: "careers" as const },
+      { href: "/contact", labelKey: "contact" as const },
+    ],
+  },
+] as const;
 
 export function Footer() {
+  const t = useTranslations("Nav");
+  const tFooter = useTranslations("Footer");
+  const tCommon = useTranslations("Common");
+
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
       <Container>
@@ -14,7 +51,7 @@ export function Footer() {
             <Link
               href="/"
               className="inline-block focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded"
-              aria-label="Cloud Telecommunications – Home"
+              aria-label={t("homeAria")}
             >
               <Image
                 src="/logo.png"
@@ -25,10 +62,10 @@ export function Footer() {
               />
             </Link>
           </div>
-          {footerSections.map((section) => (
-            <div key={section.title}>
+          {footerStructure.map((section) => (
+            <div key={section.titleKey}>
               <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
-                {section.title}
+                {tFooter(section.titleKey)}
               </h3>
               <ul className="mt-4 space-y-2">
                 {section.links.map((link) => (
@@ -37,7 +74,7 @@ export function Footer() {
                       href={link.href}
                       className="text-sm text-slate-600 hover:text-accent"
                     >
-                      {link.label}
+                      {t(link.labelKey)}
                     </Link>
                   </li>
                 ))}
@@ -54,7 +91,7 @@ export function Footer() {
               {company.contact.email}
             </a>
           </div>
-          <span>© {new Date().getFullYear()} {marka.legalName}. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} {marka.legalName}. {tCommon("allRightsReserved")}</span>
         </div>
       </Container>
     </footer>

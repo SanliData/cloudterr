@@ -1,0 +1,126 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "capabilities": "Capabilities",
+    "services": "Services",
+    "projects": "Projects",
+    "coverage": "Coverage",
+    "safetyQuality": "Safety & Quality",
+    "internationalCooperation": "International Cooperation",
+    "internetWorld": "Internet World",
+    "glossary": "Glossary",
+    "careers": "Careers",
+    "contact": "Contact",
+    "requestRfq": "Request RFQ",
+    "overview": "Overview",
+    "backboneLonghaul": "Backbone & Long-Haul",
+    "dataCenter": "Data Center",
+    "ftthFttp": "FTTH/FTTP",
+    "aerial": "Aerial",
+    "underground": "Underground",
+    "splicingTesting": "Splicing & Testing",
+    "restorationCloseout": "Restoration & Closeout",
+    "company": "Company",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "homeAria": "Cloud Telecommunications – Home"
+  },
+  "Common": {
+    "requestRfq": "Request RFQ",
+    "speakToOps": "Speak to Ops",
+    "viewAll": "View all",
+    "viewAllServices": "View all services",
+    "learnMore": "Learn more",
+    "aboutUs": "About us",
+    "viewCoverage": "View coverage",
+    "downloadCapabilities": "Download Capabilities Statement (PDF)",
+    "requestPrequalification": "Request Prequalification Package",
+    "allRightsReserved": "All rights reserved"
+  },
+  "Home": {
+    "heroTitle": "Building America's Fiber Infrastructure — From Backbone to Broadband",
+    "heroSubtitle": "Underground & aerial, HDD, splicing & testing, restoration. For carriers, data centers, municipalities, and GCs.",
+    "leadershipHeading": "Built on 40+ Years of Field Leadership",
+    "leadershipText": "Since 1977, our founder has led outside plant and infrastructure operations across complex field environments. Today, Cloud Telecommunications continues that operational discipline — delivering safe, accountable, and performance-driven fiber infrastructure.",
+    "terryQuote": "— Terry Dickman",
+    "badgeOsha": "OSHA compliant",
+    "badgeMunicipal": "Municipal / carrier-grade",
+    "badgeUnderground": "Underground & aerial",
+    "badgeBackbone": "Backbone to FTTH",
+    "badgeCloseout": "Closeout packages",
+    "servicesTitle": "Services",
+    "servicesIntro": "Full-scope fiber construction from backbone and data center connectivity to FTTH and last-mile.",
+    "coverageTitle": "Coverage",
+    "coverageIntro": "Nationwide project support where applicable.",
+    "coverageMobilization": "Crews available for deployments; rapid response options for qualified projects.",
+    "internationalTitle": "International Technical Collaboration",
+    "internationalIntro": "We maintain strategic technical collaboration with experienced fiber infrastructure firms internationally, supporting knowledge exchange and best-practice alignment in backbone, metro, and FTTH deployments.",
+    "leadershipTitle": "Leadership",
+    "leadershipYears": "{years}+ years telecom infrastructure experience.",
+    "leadershipCompanyYears": "{name} brings {experienceYears}+ years of operational fiber construction experience to every project.",
+    "capabilitiesTitle": "Capabilities Statement",
+    "capabilitiesIntro": "Our capabilities statement summarizes our scope, safety, and experience for carriers, municipalities, and GCs. Download a copy for your vendor files.",
+    "ctaTitle": "Ready to get started?",
+    "ctaSubtitle": "Request an RFQ or speak with our operations team to discuss your project."
+  },
+  "Services": {
+    "backbone-longhaul": {
+      "title": "Backbone & Long-Haul",
+      "shortDescription": "Middle-mile and long-haul fiber routes for carriers and regional networks."
+    },
+    "data-center": {
+      "title": "Data Center Connectivity",
+      "shortDescription": "Fiber links to and between data centers, including campus and metro rings."
+    },
+    "ftth-fttp": {
+      "title": "FTTH/FTTP & Last-Mile",
+      "shortDescription": "Fiber to the home and premises; last-mile distribution and drop deployment."
+    },
+    "aerial": {
+      "title": "Aerial Construction",
+      "shortDescription": "Pole-line and strand construction; lasher and OSP aerial placement."
+    },
+    "underground": {
+      "title": "Underground Construction",
+      "shortDescription": "Trench, plow, HDD, and conduit placement for OSP underground."
+    },
+    "splicing-testing": {
+      "title": "Splicing, Testing & Turn-Up",
+      "shortDescription": "Fusion splicing, OTDR and loss testing, and circuit turn-up support."
+    },
+    "restoration-closeout": {
+      "title": "Restoration & Closeout",
+      "shortDescription": "Restoration of ROW and pavement; closeout packages and documentation."
+    }
+  },
+  "Footer": {
+    "services": "Services",
+    "company": "Company"
+  },
+  "Contact": {
+    "title": "Contact / RFQ",
+    "subtitle": "Submit a request for quote or reach our team. We respond to RFQs and calls during business hours.",
+    "office": "Office / Contact",
+    "businessHours": "Business hours",
+    "speakToOps": "Speak to Ops",
+    "speakToOpsText": "Call or email to schedule a call with our operations team. We can discuss scope, schedule, and mobilization.",
+    "submitRfq": "Submit RFQ",
+    "contactRfq": "Contact / RFQ"
+  },
+  "About": {
+    "title": "About Us",
+    "intro": "{name} is a US-based fiber infrastructure contractor. We deliver from backbone and middle-mile to FTTH/FTTP and last-mile — for carriers, data centers, municipalities, and general contractors.",
+    "missionTitle": "Mission & Approach",
+    "missionText": "We focus on safe, compliant, and well-documented fiber construction. Our approach emphasizes schedule discipline, ROW and 811 compliance, restoration, and long-term asset durability. We work as an extension of your team with clear communication and closeout packages that meet carrier and municipal standards.",
+    "leadershipTitle": "Leadership",
+    "leadershipSubtitle": "{name} — {title}. {years}+ years of telecom infrastructure experience.",
+    "timelineTitle": "Leadership timeline",
+    "experienceTitle": "Company Experience",
+    "experienceText": "{name} brings {years}+ years of operational fiber construction experience to every project. Our crews and project teams have built backbone, data center, FTTH, and municipal networks. We support nationwide projects where applicable.",
+    "valuesTitle": "Values",
+    "nextStepsTitle": "Next steps",
+    "nextStepsText": "Request our prequalification package for your vendor files, or contact us to discuss your project.",
+    "contactUs": "Contact us"
+  }
+}

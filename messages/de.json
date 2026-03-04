@@ -1,0 +1,126 @@
+{
+  "Nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "capabilities": "Leistungen",
+    "services": "Dienstleistungen",
+    "projects": "Projekte",
+    "coverage": "Einsatzgebiet",
+    "safetyQuality": "Sicherheit & Qualität",
+    "internationalCooperation": "Internationale Kooperation",
+    "internetWorld": "Internet Welt",
+    "glossary": "Glossar",
+    "careers": "Karriere",
+    "contact": "Kontakt",
+    "requestRfq": "Anfrage senden",
+    "overview": "Übersicht",
+    "backboneLonghaul": "Backbone & Langstrecke",
+    "dataCenter": "Rechenzentrum",
+    "ftthFttp": "FTTH/FTTP",
+    "aerial": "Freileitung",
+    "underground": "Erdkabel",
+    "splicingTesting": "Spleißen & Prüfung",
+    "restorationCloseout": "Wiederherstellung & Abschluss",
+    "company": "Unternehmen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "homeAria": "Cloud Telecommunications – Startseite"
+  },
+  "Common": {
+    "requestRfq": "Anfrage senden",
+    "speakToOps": "Operations kontaktieren",
+    "viewAll": "Alle anzeigen",
+    "viewAllServices": "Alle Dienstleistungen",
+    "learnMore": "Mehr erfahren",
+    "aboutUs": "Über uns",
+    "viewCoverage": "Einsatzgebiet anzeigen",
+    "downloadCapabilities": "Leistungsbeschreibung (PDF) herunterladen",
+    "requestPrequalification": "Eignungsnachweis anfordern",
+    "allRightsReserved": "Alle Rechte vorbehalten"
+  },
+  "Home": {
+    "heroTitle": "Amerikas Glasfaser-Infrastruktur — vom Backbone bis zum Breitband",
+    "heroSubtitle": "Erd- und Freileitung, HDD, Spleißen & Prüfung, Wiederherstellung. Für Carrier, Rechenzentren, Kommunen und Generalunternehmer.",
+    "leadershipHeading": "Über 40 Jahre Erfahrung in der Führung vor Ort",
+    "leadershipText": "Seit 1977 leitet unser Gründer Außenanlagen- und Infrastrukturprojekte in anspruchsvollen Umgebungen. Heute setzt Cloud Telecommunications diese operative Disziplin fort — mit sicherer, verantwortungsvoller und leistungsorientierter Glasfaser-Infrastruktur.",
+    "terryQuote": "— Terry Dickman",
+    "badgeOsha": "OSHA-konform",
+    "badgeMunicipal": "Kommunal / Carrier-Qualität",
+    "badgeUnderground": "Erd- & Freileitung",
+    "badgeBackbone": "Backbone bis FTTH",
+    "badgeCloseout": "Abschlussdokumentation",
+    "servicesTitle": "Dienstleistungen",
+    "servicesIntro": "Glasfaserbau von Backbone und Rechenzentrumsanbindung bis FTTH und Letzte Meile.",
+    "coverageTitle": "Einsatzgebiet",
+    "coverageIntro": "Projektunterstützung bundesweit, wo anwendbar.",
+    "coverageMobilization": "Teams verfügbar; schnelle Reaktion für qualifizierte Projekte.",
+    "internationalTitle": "Internationale technische Zusammenarbeit",
+    "internationalIntro": "Wir pflegen die strategische technische Zusammenarbeit mit erfahrenen Glasfaser-Infrastrukturunternehmen weltweit — Wissensaustausch und Best Practices in Backbone, Metro und FTTH.",
+    "leadershipTitle": "Führung",
+    "leadershipYears": "{years}+ Jahre Erfahrung in der Telekom-Infrastruktur.",
+    "leadershipCompanyYears": "{name} bringt {experienceYears}+ Jahre operative Glasfaser-Erfahrung in jedes Projekt ein.",
+    "capabilitiesTitle": "Leistungsbeschreibung",
+    "capabilitiesIntro": "Unsere Leistungsbeschreibung fasst Umfang, Sicherheit und Erfahrung für Carrier, Kommunen und Generalunternehmer zusammen. Laden Sie eine Kopie für Ihre Lieferantendateien herunter.",
+    "ctaTitle": "Bereit loszulegen?",
+    "ctaSubtitle": "Anfrage senden oder mit unserem Operations-Team Ihr Projekt besprechen."
+  },
+  "Services": {
+    "backbone-longhaul": {
+      "title": "Backbone & Langstrecke",
+      "shortDescription": "Mittelstrecken- und Langstrecken-Glasfaserstrecken für Carrier und regionale Netze."
+    },
+    "data-center": {
+      "title": "Rechenzentrum-Anbindung",
+      "shortDescription": "Glasfaseranbindung zu und zwischen Rechenzentren, inkl. Campus und Metro-Ringen."
+    },
+    "ftth-fttp": {
+      "title": "FTTH/FTTP & Letzte Meile",
+      "shortDescription": "Glasfaser bis zum Gebäude; Verteilung und Anschluss in der Letzten Meile."
+    },
+    "aerial": {
+      "title": "Freileitungsbau",
+      "shortDescription": "Mast- und Seilbau; Lasher und OSP-Freileitungsverlegung."
+    },
+    "underground": {
+      "title": "Erdkabelbau",
+      "shortDescription": "Graben, Pflug, HDD und Leerrohrverlegung für OSP-Erdkabel."
+    },
+    "splicing-testing": {
+      "title": "Spleißen, Prüfung & Inbetriebnahme",
+      "shortDescription": "Fusionsspleißen, OTDR- und Dämpfungsprüfung sowie Inbetriebnahme-Support."
+    },
+    "restoration-closeout": {
+      "title": "Wiederherstellung & Abschluss",
+      "shortDescription": "Wiederherstellung von Trassen und Belag; Abschlussdokumentation."
+    }
+  },
+  "Footer": {
+    "services": "Dienstleistungen",
+    "company": "Unternehmen"
+  },
+  "Contact": {
+    "title": "Kontakt / Anfrage",
+    "subtitle": "Senden Sie eine Angebotsanfrage oder erreichen Sie unser Team. Wir antworten auf Anfragen und Anrufe während der Geschäftszeiten.",
+    "office": "Büro / Kontakt",
+    "businessHours": "Geschäftszeiten",
+    "speakToOps": "Operations kontaktieren",
+    "speakToOpsText": "Rufen Sie an oder schreiben Sie eine E-Mail, um einen Termin mit unserem Operations-Team zu vereinbaren. Wir besprechen Umfang, Zeitplan und Mobilisierung.",
+    "submitRfq": "Anfrage senden",
+    "contactRfq": "Kontakt / Anfrage"
+  },
+  "About": {
+    "title": "Über uns",
+    "intro": "{name} ist ein in den USA ansässiger Glasfaser-Infrastrukturdienstleister. Von Backbone und Mittelstrecke bis FTTH/FTTP und Letzte Meile — für Carrier, Rechenzentren, Kommunen und Generalunternehmer.",
+    "missionTitle": "Auftrag & Vorgehen",
+    "missionText": "Wir konzentrieren uns auf sicheren, konformen und gut dokumentierten Glasfaserbau. Unser Ansatz betont Termintreue, ROW- und 811-Konformität, Wiederherstellung und langfristige Beständigkeit. Wir arbeiten als Verlängerung Ihres Teams mit klarer Kommunikation und Abschlussdokumentation nach Carrier- und Kommunalstandards.",
+    "leadershipTitle": "Führung",
+    "leadershipSubtitle": "{name} — {title}. {years}+ Jahre Erfahrung in der Telekom-Infrastruktur.",
+    "timelineTitle": "Führungs-Meilensteine",
+    "experienceTitle": "Unternehmenserfahrung",
+    "experienceText": "{name} bringt {years}+ Jahre operative Glasfaser-Erfahrung in jedes Projekt. Unsere Teams haben Backbone-, Rechenzentrums-, FTTH- und Kommunalnetze gebaut. Wir unterstützen bundesweite Projekte, wo anwendbar.",
+    "valuesTitle": "Werte",
+    "nextStepsTitle": "Nächste Schritte",
+    "nextStepsText": "Fordern Sie unser Eignungsnachweis-Paket an oder kontaktieren Sie uns für Ihr Projekt.",
+    "contactUs": "Kontakt"
+  }
+}

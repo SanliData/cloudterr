@@ -1,17 +1,19 @@
 # Manuel deploy adımları
 
 **Canlı site:** https://www.cloudtelc.com/  
-**Git repo:** https://github.com/SanliData/cloudterr
+**Canlıya alınan repo (kaynak):** https://github.com/SanliData/cloudterr — production bu repodan deploy edilir.
 
-GitHub Actions SSH ile bağlanamıyorsa, sunucuya kendin bağlanıp aşağıdaki adımları uygula. Bu yöntemle canlıya alındı; güncellemeler için aynı yol kullanılacak.
+GitHub Actions SSH ile bağlanamıyorsa, sunucuya kendin bağlanıp aşağıdaki adımları uygula. Sunucuda `origin` = cloudterr olmalı. Bu yöntemle canlıya alındı; güncellemeler için aynı yol kullanılacak.
 
 ---
 
 ## Güncelleme rutini (kod değişince)
 
-1. Değişiklikleri GitHub’a push et: `git push origin main`
+**Kaynak repo: cloudterr.** Değişiklikleri cloudterr’e push et; canlı sunucu buradan güncellenir.
+
+1. Değişiklikleri **cloudterr**’e push et: `git push origin main` (origin = https://github.com/SanliData/cloudterr)
 2. Sunucuya bağlan: `ssh root@138.68.24.211`
-3. Sunucuda tek komut:
+3. Sunucuda tek komut (origin = cloudterr olmalı):
    ```bash
    cd /var/www/cloudtelc && git fetch origin && git reset --hard origin/main && npm install && npm run build && pm2 restart cloudtelc
    ```
@@ -218,3 +220,12 @@ chmod 600 ~/.ssh/authorized_keys
 - **Actions** → son workflow → **Re-run all jobs**
 
 **Kontrol:** Bilgisayarında `ssh -i ~/.ssh/cloudterr_deploy root@138.68.24.211` ile bağlanabiliyorsan, GitHub Actions da aynı key ile bağlanır.
+
+---
+
+## Hangi repo canlıya alınır?
+
+**Production (www.cloudtelc.com) her zaman https://github.com/SanliData/cloudterr reposundan alınır.**
+
+- **cloudterr** = ana repo, canlı deploy kaynağı. Push → GitHub Actions (`deploy.yml`) veya manuel komutlar sunucuda `git fetch origin` (origin = cloudterr) ile günceller.
+- **cloudtelc** = yedek repo. İsteğe bağlı: `deploy-cloudtelc.yml` ile bu repodan da deploy tetiklenebilir; ana kaynak cloudterr’dir.

@@ -1,0 +1,126 @@
+{
+  "Nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "capabilities": "Yeterlilikler",
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "coverage": "Kapsam",
+    "safetyQuality": "Güvenlik ve Kalite",
+    "internationalCooperation": "Uluslararası İş Birliği",
+    "internetWorld": "İnternet Dünyası",
+    "glossary": "Sözlük",
+    "careers": "Kariyer",
+    "contact": "İletişim",
+    "requestRfq": "Teklif Talebi",
+    "overview": "Genel Bakış",
+    "backboneLonghaul": "Backbone ve Uzun Mesafe",
+    "dataCenter": "Veri Merkezi",
+    "ftthFttp": "FTTH/FTTP",
+    "aerial": "Havai",
+    "underground": "Yeraltı",
+    "splicingTesting": "Splice ve Test",
+    "restorationCloseout": "Restorasyon ve Kapanış",
+    "company": "Şirket",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "homeAria": "Cloud Telecommunications – Ana sayfa"
+  },
+  "Common": {
+    "requestRfq": "Teklif Talebi",
+    "speakToOps": "Operasyon ile Görüş",
+    "viewAll": "Tümünü gör",
+    "viewAllServices": "Tüm hizmetler",
+    "learnMore": "Daha fazla",
+    "aboutUs": "Hakkımızda",
+    "viewCoverage": "Kapsamı gör",
+    "downloadCapabilities": "Yeterlilik Belgesi indir (PDF)",
+    "requestPrequalification": "Ön Yeterlilik Paketi Talep Et",
+    "allRightsReserved": "Tüm hakları saklıdır"
+  },
+  "Home": {
+    "heroTitle": "Amerika'nın Fiber Altyapısını İnşa Ediyoruz — Backbone'dan Geniş Banda",
+    "heroSubtitle": "Yeraltı ve havai, HDD, splice ve test, restorasyon. Operatörler, veri merkezleri, belediyeler ve ana yükleniciler için.",
+    "leadershipHeading": "40+ Yıllık Saha Liderliğine Dayanıyor",
+    "leadershipText": "1977'den bu yana kurucumuz, karmaşık saha ortamlarında dış plant ve altyapı operasyonlarına öncülük etti. Bugün Cloud Telecommunications, güvenli, hesap verebilir ve performans odaklı fiber altyapı sunmaya devam ediyor.",
+    "terryQuote": "— Terry Dickman",
+    "badgeOsha": "OSHA uyumlu",
+    "badgeMunicipal": "Belediye / operatör düzeyi",
+    "badgeUnderground": "Yeraltı ve havai",
+    "badgeBackbone": "Backbone'dan FTTH'ye",
+    "badgeCloseout": "Kapanış paketleri",
+    "servicesTitle": "Hizmetler",
+    "servicesIntro": "Backbone ve veri merkezi bağlantısından FTTH ve son mile kadar tam kapsamlı fiber inşaat.",
+    "coverageTitle": "Kapsam",
+    "coverageIntro": "Uygulanabilir yerlerde ülke çapında proje desteği.",
+    "coverageMobilization": "Ekipler seferberlik için hazır; nitelikli projeler için hızlı yanıt seçenekleri.",
+    "internationalTitle": "Uluslararası Teknik İş Birliği",
+    "internationalIntro": "Backbone, metro ve FTTH projelerinde bilgi alışverişi ve en iyi uygulama uyumu için deneyimli uluslararası fiber altyapı firmalarıyla stratejik teknik iş birliği yürütüyoruz.",
+    "leadershipTitle": "Liderlik",
+    "leadershipYears": "{years}+ yıl telekom altyapı deneyimi.",
+    "leadershipCompanyYears": "{name}, her projeye {experienceYears}+ yıllık operatif fiber inşaat deneyimi getiriyor.",
+    "capabilitiesTitle": "Yeterlilik Beyanı",
+    "capabilitiesIntro": "Yeterlilik beyanımız operatörler, belediyeler ve ana yükleniciler için kapsam, güvenlik ve deneyimimizi özetler. Tedarikçi dosyalarınız için bir kopya indirin.",
+    "ctaTitle": "Başlamaya hazır mısınız?",
+    "ctaSubtitle": "Teklif talebi gönderin veya projenizi görüşmek için operasyon ekibimizle iletişime geçin."
+  },
+  "Services": {
+    "backbone-longhaul": {
+      "title": "Backbone ve Uzun Mesafe",
+      "shortDescription": "Operatörler ve bölgesel ağlar için orta ve uzun mesafe fiber güzergahları."
+    },
+    "data-center": {
+      "title": "Veri Merkezi Bağlantısı",
+      "shortDescription": "Kampüs ve metro halkaları dahil veri merkezlerine ve aralarında fiber bağlantılar."
+    },
+    "ftth-fttp": {
+      "title": "FTTH/FTTP ve Son Mil",
+      "shortDescription": "Konut ve işyerine fiber; son mil dağıtım ve drop kurulumu."
+    },
+    "aerial": {
+      "title": "Havai İnşaat",
+      "shortDescription": "Direk ve kablolu inşaat; lasher ve OSP havai yerleşim."
+    },
+    "underground": {
+      "title": "Yeraltı İnşaat",
+      "shortDescription": "OSP yeraltı için hendek, pulluk, HDD ve kanal döşeme."
+    },
+    "splicing-testing": {
+      "title": "Splice, Test ve Devreye Alma",
+      "shortDescription": "Füzyon splice, OTDR ve kayıp testi, devre devreye alma desteği."
+    },
+    "restoration-closeout": {
+      "title": "Restorasyon ve Kapanış",
+      "shortDescription": "ROW ve kaplama restorasyonu; kapanış paketleri ve dokümantasyon."
+    }
+  },
+  "Footer": {
+    "services": "Hizmetler",
+    "company": "Şirket"
+  },
+  "Contact": {
+    "title": "İletişim / Teklif Talebi",
+    "subtitle": "Teklif talebi gönderin veya ekibimize ulaşın. Teklif taleplerine ve aramalara iş saatleri içinde yanıt veriyoruz.",
+    "office": "Ofis / İletişim",
+    "businessHours": "Çalışma saatleri",
+    "speakToOps": "Operasyon ile Görüş",
+    "speakToOpsText": "Kapsam, program ve seferberlik hakkında görüşmek için operasyon ekibimizle arama veya e-posta ile randevu alın.",
+    "submitRfq": "Teklif Talebi Gönder",
+    "contactRfq": "İletişim / Teklif Talebi"
+  },
+  "About": {
+    "title": "Hakkımızda",
+    "intro": "{name}, ABD merkezli bir fiber altyapı yüklenicisidir. Backbone ve orta milden FTTH/FTTP ve son mile — operatörler, veri merkezleri, belediyeler ve ana yükleniciler için hizmet veriyoruz.",
+    "missionTitle": "Misyon ve Yaklaşım",
+    "missionText": "Güvenli, uyumlu ve iyi dokümante edilmiş fiber inşaatına odaklanıyoruz. Yaklaşımımız program disiplini, ROW ve 811 uyumu, restorasyon ve uzun ömürlü varlık dayanıklılığını vurgular. Taşıyıcı ve belediye standartlarına uygun kapanış paketleri ve net iletişimle ekibinizin bir uzantısı olarak çalışıyoruz.",
+    "leadershipTitle": "Liderlik",
+    "leadershipSubtitle": "{name} — {title}. {years}+ yıl telekom altyapı deneyimi.",
+    "timelineTitle": "Liderlik zaman çizelgesi",
+    "experienceTitle": "Şirket Deneyimi",
+    "experienceText": "{name}, her projeye {years}+ yıllık operatif fiber inşaat deneyimi getiriyor. Ekiplerimiz backbone, veri merkezi, FTTH ve belediye ağları inşa etti. Uygulanabilir yerlerde ülke çapında projelere destek veriyoruz.",
+    "valuesTitle": "Değerler",
+    "nextStepsTitle": "Sonraki adımlar",
+    "nextStepsText": "Tedarikçi dosyalarınız için ön yeterlilik paketimizi talep edin veya projenizi görüşmek için bize ulaşın.",
+    "contactUs": "İletişim"
+  }
+}
