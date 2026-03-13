@@ -1,0 +1,53 @@
+{
+  "description": "CloudTelc Texas-focused SEO meta and structured data reference. Use for canonical, Open Graph, and JSON-LD consistency. Page-level metadata is implemented in generateMetadata and messages (en/de/tr).",
+  "baseUrl": "https://www.cloudtelc.com",
+  "texasDataCenters": {
+    "path": "/[locale]/services/texas-data-centers",
+    "canonicalTemplate": "https://www.cloudtelc.com/{locale}/services/texas-data-centers",
+    "metaTitle": "Hyperscale Data Center Development Texas | DFW Fiber Infrastructure & AI Site Selection",
+    "metaDescription": "Texas data center market: 78 GW demand by 2030, DFW 64% share. CloudTelc delivers high-voltage power transmission for data centers, AI infrastructure site selection, and Texas data center tax incentives expertise. Dallas, Houston, San Antonio, Austin.",
+    "keywords": [
+      "Hyperscale Data Center Development Texas",
+      "DFW Fiber Infrastructure",
+      "High Voltage Power Transmission for Data Centers",
+      "AI Infrastructure Site Selection",
+      "Texas Data Center Tax Incentives"
+    ],
+    "stats": {
+      "demandBy2030GW": 78,
+      "dfwMarketSharePercent": 64,
+      "plannedProjects": 108,
+      "capacityMultiplier": "10x",
+      "existingCapacityGW": 3.4,
+      "plannedAdditionalCapacityGW": 48,
+      "taxRevenueImpactBillion": 1.6,
+      "waterUseBillionGallonsAnnual": 25
+    },
+    "regions": [
+      { "name": "Dallas–Fort Worth (DFW)", "marketSharePercent": 64 },
+      { "name": "Houston", "marketSharePercent": 20 },
+      { "name": "San Antonio", "marketSharePercent": 10 },
+      { "name": "Austin" }
+    ],
+    "schema": {
+      "Service": {
+        "@type": "Service",
+        "name": "Texas Data Center Market — Hyperscale Data Center Development & DFW Fiber Infrastructure",
+        "provider": "Cloud Telecommunications",
+        "areaServed": "Texas, United States"
+      },
+      "FAQPage": {
+        "topics": [
+          "ERCOT role in Texas data center energy demand",
+          "Texas data center water consumption (25 billion gallons annually)",
+          "Texas data center tax incentives"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Secure Your Place in the 48 GW Wave",
+      "button": "Contact CloudTelc for Site Selection & Infrastructure"
+    },
+    "imageAltFormat": "hyperscale-data-center-site-prep-texas-cloudtelc.jpg — use descriptive, keyword-rich alt text in this style for Texas page images."
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
@@ -22,16 +23,67 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ServicesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("ServicesPage");
   return (
     <>
       <section className="bg-slate-50 border-b border-slate-200 py-16">
         <Section containerClassName="max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">Services</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{t("title")}</h1>
           <p className="mt-4 text-lg text-slate-600">
-            Full-scope fiber construction from backbone and long-haul to FTTH and last-mile. Each service has a dedicated page with scope, methods, deliverables, and typical clients.
+            {t("intro")}
           </p>
         </Section>
       </section>
+
+      <Section className="bg-white border-b border-slate-200">
+        <h2 className="text-lg font-semibold text-slate-900 mb-4">{t("categoriesTitle")}</h2>
+        <ul className="flex flex-col gap-2 text-slate-700" role="list">
+          <li className="flex items-center gap-2">
+            <span className="text-accent font-medium" aria-hidden>├</span>
+            {t("fiberInfrastructure")}
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-accent font-medium" aria-hidden>├</span>
+            {t("dataCenterLandDevelopment")}
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-accent font-medium" aria-hidden>├</span>
+            <Link
+              href="/services/data-center-land-investment"
+              className="text-accent font-medium hover:underline"
+            >
+              {t("dataCenterLandPartnership")}
+            </Link>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-accent font-medium" aria-hidden>├</span>
+            <Link
+              href="/services/data-center-energy-optimization"
+              className="text-accent font-medium hover:underline"
+            >
+              {t("dataCenterEnergyOptimization")}
+            </Link>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-accent font-medium" aria-hidden>├</span>
+            <Link
+              href="/services/turnkey-data-center-development"
+              className="text-accent font-medium hover:underline"
+            >
+              {t("turnkeyDataCenterDevelopment")}
+            </Link>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-accent font-medium" aria-hidden>└</span>
+            <Link
+              href="/services/texas-data-centers"
+              className="text-accent font-medium hover:underline"
+            >
+              {t("texasDataCenters")}
+            </Link>
+          </li>
+        </ul>
+      </Section>
 
       <Section>
         <div className="space-y-8">
@@ -56,7 +108,7 @@ export default async function ServicesPage({ params }: Props) {
                     href={`/services/${s.slug}`}
                     className="text-accent font-medium hover:underline shrink-0"
                   >
-                    View details →
+                    {t("viewDetails")}
                   </Link>
                 </div>
               </div>

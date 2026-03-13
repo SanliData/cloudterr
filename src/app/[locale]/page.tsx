@@ -20,6 +20,7 @@ export default async function HomePage({ params }: Props) {
   const t = await getTranslations("Home");
   const tCommon = await getTranslations("Common");
   const tServices = await getTranslations("Services");
+  const tBanner = await getTranslations("LeadBanner");
 
   return (
     <>
@@ -48,6 +49,24 @@ export default async function HomePage({ params }: Props) {
           </div>
         </Container>
       </section>
+
+      <Section className="bg-accent/10 border-b border-accent/20">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">{tBanner("title")}</h2>
+          <p className="mt-3 text-slate-700">{tBanner("subtitle")}</p>
+          <div className="mt-6 flex flex-wrap gap-3 justify-center">
+            <Button href="/land-evaluation" variant="primary" size="lg" className="bg-accent hover:bg-accent/90 text-white">
+              {tBanner("ctaLand")}
+            </Button>
+            <Button href="/broker-partnership" variant="outline" size="lg" className="border-slate-700 text-slate-800 hover:bg-slate-200">
+              {tBanner("ctaBroker")}
+            </Button>
+            <Button href="/data-center-energy-report" variant="outline" size="lg" className="border-slate-700 text-slate-800 hover:bg-slate-200">
+              {tBanner("ctaEnergy")}
+            </Button>
+          </div>
+        </div>
+      </Section>
 
       <Section className="bg-slate-50 border-b border-slate-200">
         <div className="flex flex-wrap gap-3 justify-center">

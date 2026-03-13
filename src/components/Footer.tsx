@@ -19,6 +19,10 @@ const footerStructure = [
       { href: "/services/underground", labelKey: "underground" as const },
       { href: "/services/splicing-testing", labelKey: "splicingTesting" as const },
       { href: "/services/restoration-closeout", labelKey: "restorationCloseout" as const },
+      { href: "/services/data-center-land-investment", labelKey: "dataCenterLandPartnership" as const },
+      { href: "/services/data-center-energy-optimization", labelKey: "dataCenterEnergyOptimization" as const },
+      { href: "/services/turnkey-data-center-development", labelKey: "turnkeyDataCenterDevelopment" as const },
+      { href: "/services/texas-data-centers", labelKey: "texasDataCenters" as const },
     ],
   },
   {

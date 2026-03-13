@@ -25,6 +25,9 @@ export const footerSections = [
       { href: "/services/underground", label: "Underground" },
       { href: "/services/splicing-testing", label: "Splicing & Testing" },
       { href: "/services/restoration-closeout", label: "Restoration & Closeout" },
+      { href: "/services/data-center-land-investment", label: "Data Center Land Partnership & Investment" },
+      { href: "/services/data-center-energy-optimization", label: "Data Center Energy Optimization" },
+      { href: "/services/turnkey-data-center-development", label: "Turnkey Data Center Development" },
     ],
   },
   {

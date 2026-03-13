@@ -1,0 +1,27 @@
+{
+  "page_title": "Texas Hyperscale Data Center Infrastructure | CloudTelc",
+  "meta_description": "Texas leads the US with 3.4GW capacity. CloudTelc provides expert site selection, high-voltage power & fiber connectivity for hyperscale AI data centers in DFW, Houston, and beyond.",
+  "keywords": [
+    "Texas Data Center Development",
+    "Hyperscale Infrastructure",
+    "DFW Fiber Routes",
+    "ERCOT Power Demand 2030",
+    "AI Campus Site Prep"
+  ],
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Data Center Infrastructure & Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "CloudTelc",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX"
+      }
+    },
+    "areaServed": "Texas, USA",
+    "description": "Specializing in the 48GW expansion of Texas's data center market, focusing on power, fiber, and site preparation."
+  }
+}
